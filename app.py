@@ -280,12 +280,11 @@ color:#f8fafc;
 <h3>Informasi Sistem</h3>
 
 <p>
-Aplikasi ini digunakan untuk mengklasifikasikan tingkat kesegaran ikan nila, kembung, dan tuna
-berdasarkan gambar menggunakan model CNN MobileNetV2.
+Aplikasi ini digunakan untuk mengklasifikasikan tingkat kesegaran ikan nila, kembung, dan tuna berdasarkan gambar ikan yang diunggah menggunakan arsitektur MobileNetV2.
 </p>
 
 <p>
-Hasil klasifikasi terdiri dari:
+HKategori Klasifikasi:
 </p>
 
 <ul>
@@ -321,7 +320,8 @@ uploaded_file = st.file_uploader(
 )
 
 st.info(
-    "Tips: Gunakan gambar ikan dengan pencahayaan yang baik, fokus yang jelas, dan latar belakang yang tidak terlalu ramai agar hasil klasifikasi lebih akurat."
+    "Tips: Gunakan gambar ikan dengan pencahayaan yang baik, fokus yang jelas, dan latar belakang yang sederhana agar hasil klasifikasi lebih akurat.\n\n"
+    "Catatan: Hasil klasifikasi merupakan prediksi model berdasarkan gambar ikan yang diunggah dan tidak menggantikan pemeriksaan organoleptik secara langsung."
 )
 
 if uploaded_file:
