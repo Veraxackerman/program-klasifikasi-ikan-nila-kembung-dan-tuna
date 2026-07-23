@@ -317,7 +317,7 @@ st.subheader("Unggah Citra Ikan")
 
 uploaded_file = st.file_uploader(
     "",
-    type=["jpg", "jpeg", "png", "webp"]
+    type=["jpg", "jpeg", "png"]
 )
 
 st.info(
