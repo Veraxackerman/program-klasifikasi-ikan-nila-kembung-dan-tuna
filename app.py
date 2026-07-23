@@ -292,10 +292,6 @@ HKategori Klasifikasi:
 <li>❌ Not Fresh (Tidak Segar)</li>
 </ul>
 
-<p>
-Gunakan gambar ikan yang jelas agar hasil prediksi lebih akurat.
-</p>
-
 </div>
 """, unsafe_allow_html=True)
 
