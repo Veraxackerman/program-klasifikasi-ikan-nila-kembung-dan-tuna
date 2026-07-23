@@ -406,8 +406,9 @@ font-size:14px;
 line-height:1.7;
 ">
 
-Sistem Klasifikasi Kesegaran Ikan <br>
-CNN MobileNetV2 • Streamlit • Astri Salwa P M
+Sistem Klasifikasi Kesegaran Ikan
+MobileNetV2 • Streamlit
+© 2026 Astri Salwa Putri Madani
 
 </div>
 """, unsafe_allow_html=True)
