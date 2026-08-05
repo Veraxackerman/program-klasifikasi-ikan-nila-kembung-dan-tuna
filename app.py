@@ -55,31 +55,44 @@ body {
     border-radius: 14px;
 }
 
-/* File Uploader */
+/* ================= FILE UPLOADER ================= */
+
 [data-testid="stFileUploader"]{
     background: transparent !important;
     border: none !important;
-    padding: 0 !important;
 }
 
+/* Kotak upload */
 [data-testid="stFileUploaderDropzone"]{
-    background: #ffffff !important;
-    border: 2px dashed #cbd5e1 !important;
-    border-radius: 14px !important;
-    padding: 20px !important;
-    transition: all .2s ease;
+    background: linear-gradient(180deg,#f8fffb,#eefcf3) !important;
+    border: 2px dashed #22c55e !important;
+    border-radius: 16px !important;
+    padding: 25px !important;
+    transition: all .25s ease;
 }
 
 [data-testid="stFileUploaderDropzone"]:hover{
     border-color: #16a34a !important;
+    background: #ecfdf5 !important;
 }
 
+/* Semua tulisan */
 [data-testid="stFileUploaderDropzone"] *{
-    color: #334155 !important;
+    color: #14532d !important;
 }
 
+/* Tombol Browse files */
 [data-testid="stFileUploaderDropzone"] button{
+    background: #16a34a !important;
+    color: white !important;
+    border: none !important;
     border-radius: 10px !important;
+    padding: 8px 20px !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stFileUploaderDropzone"] button:hover{
+    background: #15803d !important;
 }
 
 @media (max-width: 768px) {
