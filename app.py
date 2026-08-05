@@ -9,8 +9,6 @@ st.set_page_config(
     layout="centered"
 )
 
-st.write("Versi Streamlit:", st.__version__) 
-
 st.markdown("""
 <style>
 
