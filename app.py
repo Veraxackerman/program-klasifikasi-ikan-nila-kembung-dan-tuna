@@ -4,6 +4,8 @@ from PIL import Image
 import tensorflow as tf
 import os
 
+st.write("Versi Streamlit:", st.__version__)
+
 st.set_page_config(
     page_title="Sistem Klasifikasi Kesegaran Ikan",
     layout="centered"
@@ -50,6 +52,27 @@ body {
 .app-header p {
     color: rgba(255,255,255,.85) !important;
     margin: 0;
+}
+.info-card{
+    background:#1e293b;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:20px;
+    color:#f8fafc;
+}
+
+.info-card h3{
+    color:#ffffff !important;
+    margin-top:0;
+    margin-bottom:16px;
+    font-size:24px;
+    font-weight:700;
+}
+
+.info-card p,
+.info-card li{
+    color:#f8fafc !important;
+    line-height:1.7;
 }
 
 [data-testid="stImage"] img {
@@ -302,15 +325,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("""
-<div style="
-background:#1e293b;
-padding:20px;
-border-radius:18px;
-margin-bottom:20px;
-box-shadow:0 2px 10px rgba(0,0,0,.05);
-color:#f8fafc;
-">
-
 <div class="info-card">
 
 <h3>Informasi Sistem</h3>
@@ -327,7 +341,6 @@ Aplikasi ini digunakan untuk mengklasifikasikan tingkat kesegaran ikan nila, kem
 </ul>
 
 </div>
-
 """, unsafe_allow_html=True)
 
 with st.spinner("Memuat model..."):
