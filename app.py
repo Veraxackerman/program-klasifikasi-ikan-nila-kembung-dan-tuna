@@ -379,11 +379,8 @@ if uploaded_file:
         st.error("Gambar tidak dapat dibaca.")
         st.stop()
 
-    st.image(
-        image,
-        use_container_width=True
-    )
-
+    st.image(image, width=450)
+    
     st.markdown("## Hasil Klasifikasi")
 
     with st.spinner("Sedang memproses gambar..."):
