@@ -284,7 +284,7 @@ Aplikasi ini digunakan untuk mengklasifikasikan tingkat kesegaran ikan nila, kem
 </p>
 
 <p>
-HKategori Klasifikasi:
+Kategori Klasifikasi:
 </p>
 
 <ul>
