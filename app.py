@@ -55,11 +55,31 @@ body {
     border-radius: 14px;
 }
 
-[data-testid="stFileUploader"] {
-    border: 2px dashed #475569;
-    border-radius: 16px;
-    padding: 8px;
-    background: #1e293b;
+/* File Uploader */
+[data-testid="stFileUploader"]{
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+[data-testid="stFileUploaderDropzone"]{
+    background: #ffffff !important;
+    border: 2px dashed #cbd5e1 !important;
+    border-radius: 14px !important;
+    padding: 20px !important;
+    transition: all .2s ease;
+}
+
+[data-testid="stFileUploaderDropzone"]:hover{
+    border-color: #16a34a !important;
+}
+
+[data-testid="stFileUploaderDropzone"] *{
+    color: #334155 !important;
+}
+
+[data-testid="stFileUploaderDropzone"] button{
+    border-radius: 10px !important;
 }
 
 @media (max-width: 768px) {
