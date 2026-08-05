@@ -311,15 +311,15 @@ box-shadow:0 2px 10px rgba(0,0,0,.05);
 color:#f8fafc;
 ">
 
+<div class="info-card">
+
 <h3>Informasi Sistem</h3>
 
 <p>
 Aplikasi ini digunakan untuk mengklasifikasikan tingkat kesegaran ikan nila, kembung, dan tuna berdasarkan gambar ikan yang diunggah menggunakan arsitektur MobileNetV2.
 </p>
 
-<p>
-Kategori Klasifikasi:
-</p>
+<p><b>Kategori Klasifikasi:</b></p>
 
 <ul>
 <li>✅ Fresh (Segar)</li>
@@ -327,6 +327,7 @@ Kategori Klasifikasi:
 </ul>
 
 </div>
+
 """, unsafe_allow_html=True)
 
 with st.spinner("Memuat model..."):
