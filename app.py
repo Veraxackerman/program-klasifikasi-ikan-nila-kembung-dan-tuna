@@ -4,12 +4,12 @@ from PIL import Image
 import tensorflow as tf
 import os
 
-st.write("Versi Streamlit:", st.__version__)
-
 st.set_page_config(
     page_title="Sistem Klasifikasi Kesegaran Ikan",
     layout="centered"
 )
+
+st.write("Versi Streamlit:", st.__version__) 
 
 st.markdown("""
 <style>
