@@ -41,13 +41,14 @@ body {
 }
 
 .app-header h1 {
+    color: #ffffff !important;
     font-size: 2rem;
     margin-bottom: .4rem;
     font-weight: 800;
 }
 
 .app-header p {
-    color: rgba(255,255,255,.8);
+    color: rgba(255,255,255,.85) !important;
     margin: 0;
 }
 
