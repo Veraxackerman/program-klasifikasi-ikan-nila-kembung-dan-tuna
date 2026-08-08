@@ -4,7 +4,6 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 
-# ======================================================
 # KONFIGURASI HALAMAN
 # ======================================================
 
@@ -14,7 +13,6 @@ st.set_page_config(
     layout="centered"
 )
 
-# ======================================================
 # CSS
 # ======================================================
 
@@ -95,145 +93,62 @@ header{
 </style>
 """, unsafe_allow_html=True)
 
-# ======================================================
 # KONSTANTA
 # ======================================================
 
 IMG_SIZE = (224, 224)
 THRESHOLD = 0.5
 
-# ======================================================
 # LABEL IKAN
 # ======================================================
 
 FISH_ALLOW = {
-    "fish",
-    "tench",
-    "goldfish",
-    "salmon",
-    "eel",
-    "shark",
-    "ray",
-    "stingray",
-    "puffer",
-    "blowfish",
-    "lionfish",
-    "coho",
-    "carp",
-    "mackerel",
-    "tuna",
-    "cod",
-    "trout",
-    "snapper",
-    "grouper",
-    "flounder",
-    "sole",
-    "halibut",
-    "pike",
-    "barracuda",
-    "marlin",
-    "swordfish",
-    "anchovy",
-    "herring",
-    "sardine",
-    "catfish",
-    "tilapia"
+    "fish", "tilapia", "catfish", "carp", "goldfish", "tench", "pike",
+    "salmon", "tuna", "mackerel", "cod", "trout", "snapper", "grouper",
+    "flounder", "sole", "halibut", "barracuda", "marlin", "swordfish",
+    "anchovy", "herring", "sardine", "coho", "eel", "shark", "ray",
+    "stingray", "lionfish", "puffer", "blowfish"
 }
 
-# ======================================================
 # LABEL BUKAN IKAN
 # ======================================================
 
 NON_FISH_BLOCK = {
 
     # Human
-    "person",
-    "people",
-    "man",
-    "woman",
-    "boy",
-    "girl",
-    "human",
-    "baby",
-    "child",
-    "portrait",
-    "face",
-    "head",
+    ""person", "people", "man", "woman", "boy", "girl",
+    "human", "baby", "child", "portrait", "face", "head",
 
     # Clothes
-    "shirt",
-    "dress",
-    "coat",
-    "jacket",
-    "jeans",
-    "shoe",
-    "helmet",
-    "hat",
-    "bag",
-    "watch",
+    "shirt", "dress", "coat", "jacket", "jeans",
+    "shoe", "helmet", "hat", "bag", "watch",
 
     # Animals
-    "cat",
-    "dog",
-    "horse",
-    "cow",
-    "lion",
-    "tiger",
-    "bear",
-    "rabbit",
-    "bird",
-    "snake",
-    "frog",
-    "monkey",
+    "cat", "dog", "horse", "cow", "lion", "tiger",
+    "bear", "rabbit", "bird", "snake", "frog", "monkey",
 
     # Vehicles
-    "car",
-    "bus",
-    "truck",
-    "motorcycle",
-    "bicycle",
-    "train",
-    "airplane",
+    ""car", "bus", "truck", "motorcycle",
+    "bicycle", "train", "airplane",
 
     # Objects
-    "book",
-    "chair",
-    "table",
-    "phone",
-    "computer",
-    "television",
-    "monitor",
-    "laptop",
+    ""book", "chair", "table", "phone",
+    "computer", "television", "monitor", "laptop",
 
     # Others
-    "comic",
-    "cartoon",
-    "drawing",
-    "poster",
-    "diagram",
-    "chart",
-    "graph",
+    "comic", "cartoon", "drawing", "poster",
+    "diagram", "chart", "graph",
 
     # Seafood
-    "shrimp",
-    "lobster",
-    "crab",
-    "squid",
-    "octopus"
+    "shrimp", "lobster", "crab",
+    "squid", "octopus"
 }
 
 IGNORE_LABELS = {
-    "plate",
-    "tray",
-    "dish",
-    "bowl",
-    "platter",
-    "menu",
-    "table",
-    "napkin"
+    " "plate", "tray", "dish", "bowl",
+    "platter", "menu", "table", "napkin"
 }
 
-# ======================================================
 # LOAD MODEL KLASIFIKASI
 # ======================================================
 
@@ -265,8 +180,6 @@ def load_classifier():
 
     return None, None
 
-
-# ======================================================
 # LOAD VALIDATOR IMAGENET
 # ======================================================
 
@@ -286,8 +199,6 @@ def load_validator():
 
     return validator, preprocess_input, decode_predictions
 
-
-# ======================================================
 # VALIDASI GAMBAR
 # ======================================================
 
@@ -351,8 +262,6 @@ def validate_image(pil_img):
 
         return True, "Unknown"
 
-
-# ======================================================
 # PREPROCESSING
 # ======================================================
 
@@ -376,8 +285,6 @@ def preprocess_image(image):
 
     return img_array
 
-
-# ======================================================
 # PREDIKSI
 # ======================================================
 
@@ -413,8 +320,6 @@ def predict(model, img_array):
         prob_notfresh
     )
 
-
-# ======================================================
 # HEADER
 # ======================================================
 
@@ -460,7 +365,6 @@ berdasarkan citra digital.
 </div>
 """, unsafe_allow_html=True)
 
-# ======================================================
 # LOAD MODEL
 # ======================================================
 
@@ -471,7 +375,6 @@ if model is None:
     st.error("❌ Model tidak ditemukan.")
     st.stop()
 
-# ======================================================
 # UPLOAD
 # ======================================================
 
@@ -489,7 +392,6 @@ st.info(
     "menggantikan pemeriksaan organoleptik."
 )
 
-# ======================================================
 # PREDIKSI
 # ======================================================
 
@@ -586,7 +488,6 @@ if uploaded_file is not None:
 
         st.write(f"Confidence : {confidence*100:.2f}%")
 
-# ======================================================
 # FOOTER
 # ======================================================
 
@@ -602,7 +503,7 @@ font-size:14px;
 
 <b>Sistem Klasifikasi Kesegaran Ikan</b><br>
 
-MobileNetV2 • Streamlit<br> © 2026 Astri Salwa Putri Madani
+MobileNetV2 Streamlit © 2026 Astri Salwa Putri Madani
 
 </div>
 """,
