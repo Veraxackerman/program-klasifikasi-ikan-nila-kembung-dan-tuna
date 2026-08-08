@@ -41,80 +41,25 @@ body {
 }
 
 .app-header h1 {
-    color: #ffffff !important;
     font-size: 2rem;
     margin-bottom: .4rem;
     font-weight: 800;
 }
 
 .app-header p {
-    color: rgba(255,255,255,.85) !important;
+    color: rgba(255,255,255,.8);
     margin: 0;
-}
-.info-card{
-    background:#1e293b;
-    border-radius:18px;
-    padding:20px;
-    margin-bottom:20px;
-    color:#f8fafc;
-}
-
-.info-card h3{
-    color:#ffffff !important;
-    margin-top:0;
-    margin-bottom:16px;
-    font-size:24px;
-    font-weight:700;
-}
-
-.info-card p,
-.info-card li{
-    color:#f8fafc !important;
-    line-height:1.7;
 }
 
 [data-testid="stImage"] img {
     border-radius: 14px;
 }
 
-/* ================= FILE UPLOADER ================= */
-
-[data-testid="stFileUploader"]{
-    background: transparent !important;
-    border: none !important;
-}
-
-/* Kotak upload */
-[data-testid="stFileUploaderDropzone"]{
-    background: linear-gradient(180deg,#f8fffb,#eefcf3) !important;
-    border: 2px dashed #22c55e !important;
-    border-radius: 16px !important;
-    padding: 25px !important;
-    transition: all .25s ease;
-}
-
-[data-testid="stFileUploaderDropzone"]:hover{
-    border-color: #16a34a !important;
-    background: #ecfdf5 !important;
-}
-
-/* Semua tulisan */
-[data-testid="stFileUploaderDropzone"] *{
-    color: #14532d !important;
-}
-
-/* Tombol Browse files */
-[data-testid="stFileUploaderDropzone"] button{
-    background: #16a34a !important;
-    color: white !important;
-    border: none !important;
-    border-radius: 10px !important;
-    padding: 8px 20px !important;
-    font-weight: 600 !important;
-}
-
-[data-testid="stFileUploaderDropzone"] button:hover{
-    background: #15803d !important;
+[data-testid="stFileUploader"] {
+    border: 2px dashed #475569;
+    border-radius: 16px;
+    padding: 8px;
+    background: #1e293b;
 }
 
 @media (max-width: 768px) {
@@ -323,7 +268,14 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("""
-<div class="info-card">
+<div style="
+background:#1e293b;
+padding:20px;
+border-radius:18px;
+margin-bottom:20px;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+color:#f8fafc;
+">
 
 <h3>Informasi Sistem</h3>
 
@@ -331,7 +283,9 @@ st.markdown("""
 Aplikasi ini digunakan untuk mengklasifikasikan tingkat kesegaran ikan nila, kembung, dan tuna berdasarkan gambar ikan yang diunggah menggunakan arsitektur MobileNetV2.
 </p>
 
-<p><b>Kategori Klasifikasi:</b></p>
+<p>
+HKategori Klasifikasi:
+</p>
 
 <ul>
 <li>✅ Fresh (Segar)</li>
@@ -377,8 +331,11 @@ if uploaded_file:
         st.error("Gambar tidak dapat dibaca.")
         st.stop()
 
-    st.image(image, width=450)
-    
+    st.image(
+        image,
+        use_container_width=True
+    )
+
     st.markdown("## Hasil Klasifikasi")
 
     with st.spinner("Sedang memproses gambar..."):
