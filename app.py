@@ -602,9 +602,7 @@ font-size:14px;
 
 <b>Sistem Klasifikasi Kesegaran Ikan</b><br>
 
-MobileNetV2 • Streamlit<br>
-
-© 2026 Astri Salwa Putri Madani
+MobileNetV2 • Streamlit<br> © 2026 Astri Salwa Putri Madani
 
 </div>
 """,
