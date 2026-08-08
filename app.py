@@ -116,7 +116,7 @@ FISH_ALLOW = {
 NON_FISH_BLOCK = {
 
     # Human
-    ""person", "people", "man", "woman", "boy", "girl",
+    "person", "people", "man", "woman", "boy", "girl",
     "human", "baby", "child", "portrait", "face", "head",
 
     # Clothes
