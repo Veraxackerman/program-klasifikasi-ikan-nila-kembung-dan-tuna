@@ -21,76 +21,165 @@ st.markdown("""
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-html,
-body,
-[class*="css"]{
-    font-family:'Plus Jakarta Sans',sans-serif !important;
+html, body, [class*="css"]{
+    font-family:'Plus Jakarta Sans',sans-serif!important;
 }
 
 body{
-    background:#111827;
+    background:#f1f5f9;
 }
 
 #MainMenu,
-footer,
-header{
+header,
+footer{
     visibility:hidden;
 }
 
 .block-container{
-    max-width:900px;
-    padding-top:2rem;
+    max-width:850px;
+    padding-top:25px;
 }
 
+/* HEADER */
+
 .app-header{
-    background:linear-gradient(135deg,#064e3b,#065f46);
-    color:white;
-    padding:2rem;
-    border-radius:18px;
-    text-align:center;
-    margin-bottom:1.5rem;
+
+background:linear-gradient(135deg,#065f46,#059669);
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+color:white;
+
+margin-bottom:22px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
 }
 
 .app-header h1{
-    font-size:2rem;
-    font-weight:800;
-    margin-bottom:.3rem;
+
+font-size:34px;
+
+font-weight:800;
+
+margin-bottom:6px;
+
 }
 
 .app-header p{
-    color:rgba(255,255,255,.85);
-    margin:0;
+
+font-size:15px;
+
+color:#d1fae5;
+
 }
 
-[data-testid="stImage"] img{
-    border-radius:14px;
+/* CARD */
+
+.info-card{
+
+background:#1e293b;
+
+padding:22px;
+
+border-radius:16px;
+
+color:white;
+
+margin-bottom:25px;
+
+box-shadow:0 6px 15px rgba(0,0,0,.12);
+
 }
+
+.info-card h2{
+
+font-size:26px;
+
+margin-bottom:12px;
+
+}
+
+.info-card p{
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#e2e8f0;
+
+}
+
+/* Upload */
 
 [data-testid="stFileUploader"]{
-    border:2px dashed #475569;
-    border-radius:16px;
-    background:#1e293b;
-    padding:8px;
+
+border:2px dashed #14b8a6;
+
+border-radius:15px;
+
+padding:10px;
+
+background:white;
+
 }
 
-@media(max-width:768px){
+/* Image */
 
-.app-header{
-    padding:1.5rem;
+[data-testid="stImage"] img{
+
+border-radius:15px;
+
+border:4px solid #14b8a6;
+
 }
 
-.app-header h1{
-    font-size:1.6rem;
+/* Alert */
+
+[data-testid="stAlert"]{
+
+border-radius:15px;
+
 }
 
-.block-container{
-    padding-left:1rem;
-    padding-right:1rem;
+/* Progress */
+
+.stProgress > div > div{
+
+background:#10b981;
+
 }
+
+/* Expander */
+
+details{
+
+border-radius:12px;
+
+padding:8px;
+
+}
+
+/* Footer */
+
+.footer{
+
+text-align:center;
+
+margin-top:40px;
+
+font-size:13px;
+
+color:#64748b;
 
 }
 
 </style>
+
 """, unsafe_allow_html=True)
 
 # KONSTANTA
