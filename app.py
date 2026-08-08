@@ -413,7 +413,7 @@ st.markdown("""
 
 <p>
 
-Aplikasi ini digunakan untuk mengklasifikasikan
+Aplikasi web ini digunakan untuk mengklasifikasikan
 tingkat kesegaran ikan nila,
 kembung,
 dan tuna
@@ -423,19 +423,14 @@ menggunakan arsitektur
 
 </p>
 
-<h4>📌 Kategori Klasifikasi</h4>
-
-<ul>
-
-<li>✅ Fresh (Segar)</li>
-
-<li>❌ Not Fresh (Tidak Segar)</li>
-
+<h4 style="color:white;">Kategori Klasifikasi</h4>
+<ul style="color:white;">
+    <li>✅ Fresh (Segar)</li>
+    <li>❌ Not Fresh (Tidak Segar)</li>
 </ul>
 
 </div>
 """,unsafe_allow_html=True)
-
 # LOAD MODEL
 # ======================================================
 
