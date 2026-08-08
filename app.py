@@ -414,45 +414,46 @@ def predict(model, img_array):
 
 st.markdown("""
 <div class="app-header">
-<h1>Klasifikasi Kesegaran Ikan</h1>
-<p>
-Menggunakan CNN MobileNetV2
-untuk mengklasifikasikan
-tingkat kesegaran ikan.
-</p>
-</div>
-""", unsafe_allow_html=True)
 
+<h1>🐟 Klasifikasi Kesegaran Ikan</h1>
+
+<p>
+Menggunakan metode CNN MobileNetV2 untuk
+mengklasifikasikan tingkat kesegaran ikan
+</p>
+
+</div>
+""",unsafe_allow_html=True)
 
 st.markdown("""
-<div style="
-background:#1e293b;
-padding:20px;
-border-radius:18px;
-margin-bottom:20px;
-color:white;
-">
+<div class="info-card">
 
-<h3>Informasi Sistem</h3>
+<h2>📋 Informasi Sistem</h2>
 
 <p>
-Aplikasi ini digunakan untuk
-mengklasifikasikan tingkat
-kesegaran ikan nila,
+
+Aplikasi ini digunakan untuk mengklasifikasikan
+tingkat kesegaran ikan nila,
 kembung,
 dan tuna
-berdasarkan citra digital.
+berdasarkan gambar ikan
+menggunakan arsitektur
+<b>MobileNetV2</b>.
+
 </p>
 
-<b>Kategori:</b>
+<h4>📌 Kategori Klasifikasi</h4>
 
 <ul>
-<li>✅ Fresh</li>
-<li>❌ Not Fresh</li>
+
+<li>✅ Fresh (Segar)</li>
+
+<li>❌ Not Fresh (Tidak Segar)</li>
+
 </ul>
 
 </div>
-""", unsafe_allow_html=True)
+""",unsafe_allow_html=True)
 
 # LOAD MODEL
 # ======================================================
@@ -474,12 +475,25 @@ uploaded_file = st.file_uploader(
     type=["jpg", "jpeg", "png"]
 )
 
-st.info(
-    "Tips: Gunakan gambar ikan dengan pencahayaan yang baik, fokus yang jelas, "
-    "dan latar belakang sederhana agar hasil klasifikasi lebih akurat.\n\n"
-    "Catatan: Hasil klasifikasi merupakan prediksi model dan tidak "
-    "menggantikan pemeriksaan organoleptik."
-)
+st.info("""
+
+💡 Tips Penggunaan
+
+• Gunakan pencahayaan yang baik.
+
+• Fokus gambar harus jelas.
+
+• Gunakan latar belakang sederhana.
+
+• Upload JPG, JPEG atau PNG.
+
+⚠️ Catatan
+
+Hasil klasifikasi merupakan prediksi model
+berdasarkan citra digital dan
+tidak menggantikan pemeriksaan organoleptik.
+
+""")
 
 # PREDIKSI
 # ======================================================
