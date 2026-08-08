@@ -449,12 +449,15 @@ if model is None:
 # UPLOAD
 # ======================================================
 
-st.subheader("Unggah Citra Ikan")
-h3{
-    color:#1e293b !important;
-    font-weight:700;
-}
-
+st.markdown("""
+<h3 style="
+color:#1e293b;
+font-weight:700;
+margin-bottom:10px;
+">
+Unggah Citra Ikan
+</h3>
+""", unsafe_allow_html=True)
 uploaded_file = st.file_uploader(
     "",
     type=["jpg", "jpeg", "png"]
