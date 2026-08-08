@@ -128,11 +128,11 @@ NON_FISH_BLOCK = {
     "bear", "rabbit", "bird", "snake", "frog", "monkey",
 
     # Vehicles
-    ""car", "bus", "truck", "motorcycle",
+    "car", "bus", "truck", "motorcycle",
     "bicycle", "train", "airplane",
 
     # Objects
-    ""book", "chair", "table", "phone",
+    "book", "chair", "table", "phone",
     "computer", "television", "monitor", "laptop",
 
     # Others
@@ -145,7 +145,7 @@ NON_FISH_BLOCK = {
 }
 
 IGNORE_LABELS = {
-    " "plate", "tray", "dish", "bowl",
+    "plate", "tray", "dish", "bowl",
     "platter", "menu", "table", "napkin"
 }
 
