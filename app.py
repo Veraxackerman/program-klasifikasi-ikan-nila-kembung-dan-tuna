@@ -61,21 +61,13 @@ box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
 .app-header h1{
-
-font-size:34px;
-
-font-weight:800;
-
-margin-bottom:6px;
-
+    color:#ffffff;
+    font-weight:800;
 }
 
 .app-header p{
-
-font-size:15px;
-
-color:#d1fae5;
-
+    color:#d1fae5;
+    font-size:15px;
 }
 
 /* CARD */
@@ -97,21 +89,17 @@ box-shadow:0 6px 15px rgba(0,0,0,.12);
 }
 
 .info-card h2{
-
-font-size:26px;
-
-margin-bottom:12px;
-
+    color:#ffffff;
+    font-weight:700;
 }
 
 .info-card p{
+    color:#e2e8f0;
+    line-height:1.8;
+}
 
-font-size:15px;
-
-line-height:1.8;
-
-color:#e2e8f0;
-
+.info-card li{
+    color:#f8fafc;
 }
 
 /* Upload */
@@ -167,15 +155,8 @@ padding:8px;
 /* Footer */
 
 .footer{
-
-text-align:center;
-
-margin-top:40px;
-
-font-size:13px;
-
-color:#64748b;
-
+    color:#64748b;
+    font-size:14px;
 }
 
 </style>
@@ -469,6 +450,10 @@ if model is None:
 # ======================================================
 
 st.subheader("Unggah Citra Ikan")
+h3{
+    color:#1e293b !important;
+    font-weight:700;
+}
 
 uploaded_file = st.file_uploader(
     "",
